@@ -13,17 +13,26 @@ import "./myStyle.css";
 
 function App() {
   return (
-    <div className="flex justify-center h-screen bg-[url('./assets/bgr.jpg')]" style={{ backgroundPosition: "center", backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}>
-      <div className="w-96 p-3 bg-opacity-20 bg-white backdrop-blur-lg">
+    <div
+      className="flex justify-center h-screen bg-[url('./assets/bgr.jpg')]"
+      style={{
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+      <div className="w-full md:w-96 p-3 bg-opacity-20 bg-white backdrop-blur-lg">
         <div className="">
           <div className="flex text-white">
-            <LuMenu size={30}/>
+            <LuMenu size={30} />
             {/* <h3 className='flex items-center ml-3'>Montreuil <span className='ml-1'><LuMapPin size={11} /></span></h3> */}
           </div>
 
           <div className="text-white">
+            {/* Current temperature */}
             <h2 className="mt-8 text-7xl text-white">21°</h2>
             <h3 className="mt-3 mb-3">Cloudy</h3>
+            {/* Current location */}
             <h3 className="flex items-center">
               Montreuil{" "}
               <span className="ml-1">
@@ -36,8 +45,12 @@ function App() {
           </div>
         </div>
 
-        <div className="overflow-y-auto overflow-hidden customscrollbar" style={{ height: '452px'}}>
-          <div className="bg-blue-500 text-white rounded-2xl p-3 mt-10">
+        <div
+          className="overflow-y-auto overflow-hidden customscrollbar"
+          style={{ height: "452px" }}
+        >
+          {/* Somes weather alert */}
+          <div className="bg-opacity-30 bg-cyan backdrop-blur-lg text-white rounded-2xl p-3 mt-10">
             <h3 className="flex items-center">
               <span className="mr-1">
                 <GoAlertFill />
@@ -45,12 +58,13 @@ function App() {
               <span className="text-xl font-bold">Sever weather alert</span>
             </h3>
             <p>
-              Disruption due to thunderstorms from FRI 2:00 AM CEST until 12:00 AM
-              CEST
+              Disruption due to thunderstorms from FRI 2:00 AM CEST until 12:00
+              AM CEST
             </p>
           </div>
 
-          <div className="bg-blue-400 text-white rounded-2xl p-3 mt-3">
+          {/* Daily forecast */}
+          <div className="bg-opacity-20 bg-white backdrop-blur-lg text-white rounded-2xl p-3 mt-3">
             <h3 className="text-xl font-bold">Hourly forecast</h3>
             <hr className="mt-2 mb-2" />
             <div>
@@ -147,7 +161,8 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-blue-400 text-white rounded-2xl p-3 mt-3">
+          {/* Some usefull infos */}
+          <div className="bg-opacity-20 bg-white backdrop-blur-lg text-white rounded-2xl p-3 mt-3">
             <div className="flex flex-col items-center">
               <h3 className="text-lg font-bold">Don&apos;t miss the sunset</h3>
               <p>Sunset will be at 8:47 PM</p>
@@ -159,7 +174,8 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-blue-400 text-white rounded-2xl p-4 mt-3">
+          {/* Weekly forecast */}
+          <div className="bg-opacity-20 bg-white backdrop-blur-lg text-white rounded-2xl p-4 mt-3">
             <ul className="flex flex-col gap-y-2">
               <li className="flex items-center justify-between">
                 <span className="font-bold text-lg">Yesterday</span>
@@ -172,8 +188,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -184,8 +200,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -196,8 +212,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -208,8 +224,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -220,8 +236,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -232,8 +248,8 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
@@ -244,32 +260,63 @@ function App() {
                     <GiWaterDrop />
                     <span>1%</span>
                   </h3>
-                  <MdCloud/>
-                  <MdCloud/>
+                  <MdCloud />
+                  <MdCloud />
                   <span className="font-bold text-lg">22° 14°</span>
                 </div>
               </li>
             </ul>
           </div>
 
-          <div className="flex flex-wrap gap-2 mt-4 text-white">
-            <div className="flex flex-col items-center bg-blue-400 rounded-2xl p-2 w-44">
+          {/* UV index, humidity, wind speed sunrise & sunset */}
+          {/* <div className="flex flex-wrap gap-2 mt-4 text-white">
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2 w-44">
               <PiSunFill size={50} />
               <h2 className="font-bold">UV index</h2>
               <h2>Low</h2>
             </div>
-            <div className="flex flex-col items-center bg-blue-400 rounded-2xl p-2 w-44">
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2 w-44">
               <GiWaterDrop size={47} />
               <h2 className="font-bold">Humidity</h2>
               <h2>68%</h2>
             </div>
-            <div className="flex flex-col items-center bg-blue-400 rounded-2xl p-2 w-44">
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2 w-44">
               <FaWind size={40} />
               <h2 className="font-bold">Wind</h2>
               <h2>14 km/h</h2>
             </div>
-            <div className="flex flex-col items-center bg-blue-400 rounded-2xl p-2 w-44">
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2 w-44">
               <div className="flex justify-between w-full">
+                <div className="flex flex-col items-center">
+                  <h2 className="font-bold">Sunrise</h2>
+                  <h2>06:56</h2>
+                </div>
+                <div className="flex flex-col items-center">
+                  <h2 className="font-bold">Sunset</h2>
+                  <h2>20:47</h2>
+                </div>
+              </div>
+              <PiSunHorizonFill size={50} />
+            </div>
+          </div> */}
+          <div className="grid grid-cols-2 gap-2 mt-4 text-white">
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2">
+              <PiSunFill size={50} />
+              <h2 className="font-bold">UV index</h2>
+              <h2>Low</h2>
+            </div>
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2">
+              <GiWaterDrop size={47} />
+              <h2 className="font-bold">Humidity</h2>
+              <h2>68%</h2>
+            </div>
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2">
+              <FaWind size={40} />
+              <h2 className="font-bold">Wind</h2>
+              <h2>14 km/h</h2>
+            </div>
+            <div className="flex flex-col items-center bg-opacity-20 bg-white backdrop-blur-lg rounded-2xl p-2">
+            <div className="flex justify-between w-full">
                 <div className="flex flex-col items-center">
                   <h2 className="font-bold">Sunrise</h2>
                   <h2>06:56</h2>
@@ -283,7 +330,8 @@ function App() {
             </div>
           </div>
 
-          <div className="bg-blue-400 text-white rounded-2xl p-3 mt-3">
+          {/* AQI, Pollen, driving difficulty, runnig */}
+          <div className="bg-opacity-20 bg-white backdrop-blur-lg text-white rounded-2xl p-3 mt-3">
             <ul>
               <li className="flex items-center justify-between">
                 <span className="flex items-center gap-x-1">
